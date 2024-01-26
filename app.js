@@ -1,7 +1,7 @@
 let numeroSecreto = 0;
 let intentos = 0;
 let listaNumerosSorteados = [];
-let numeroMaximo = 100;
+let numeroMaximo = 20;
 
 function asignarTextoElemento(elemento, texto) {
     let elementoHTML = document.querySelector(elemento);
@@ -29,10 +29,10 @@ function verificarIntento() {
 
 function generarNumeroSecreto() {
     let numeroGenerado = Math.floor(Math.random() * numeroMaximo) + 1;
-    if (listaNumerosSorteados.length == numeroMaximo){
+    if (listaNumerosSorteados.length == numeroMaximo) {
         listaNumerosSorteados = [];
     }
-    if (listaNumerosSorteados.includes(numeroGenerado)){
+    if (listaNumerosSorteados.includes(numeroGenerado)) {
         return generarNumeroSecreto();
     } else {
         listaNumerosSorteados.push(numeroGenerado);
@@ -48,7 +48,6 @@ function condicionesIniciales() {
     asignarTextoElemento('h1', 'Juego del número secreto');
     asignarTextoElemento('p', `Ingrese un número del 1 al ${numeroMaximo}`);
     numeroSecreto = generarNumeroSecreto();
-    console.log(numeroSecreto);
     intentos = 1;
 }
 
@@ -59,9 +58,3 @@ function reiniciarJuego() {
 }
 
 condicionesIniciales();
-
-let listaNumeros = [1,2,3,4,5,6];
-
-function calcularPromedioNumeros() {
-    
-}

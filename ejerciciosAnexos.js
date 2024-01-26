@@ -41,16 +41,60 @@ function tablaMultiplicar(numero) {
 
 let listaGenerica = [];
 let lenguajesDeProgramacion = ["JavaScript", "C", "C++", "Kotlin", "Python"];
-lenguajesDeProgramacion.push("Java","Ruby","GoLang");
+lenguajesDeProgramacion.push("Java", "Ruby", "GoLang");
 
 function mostrarLenguajes() {
     for (let i = 0; i < lenguajesDeProgramacion.length; i++) {
-        console.log(lenguajesDeProgramacion[i]);  
+        console.log(lenguajesDeProgramacion[i]);
     }
 }
 
 function mostrarLenguajesInverso() {
     for (let i = lenguajesDeProgramacion.length - 1; i >= 0; i--) {
-        console.log(lenguajesDeProgramacion[i]);  
+        console.log(lenguajesDeProgramacion[i]);
     }
 }
+
+let listaNumeros = [1, 2, 3, 4, 5, 6];
+
+function calcularPromedioNumeros() {
+    let suma = 0;
+    for (let i = 0; i < listaNumeros.length; i++) {
+        suma += listaNumeros[i];
+    }
+    return suma / listaNumeros.length;
+}
+
+function encontrarMayorYMenor() {
+    let mayor = listaNumeros[0];
+    let menor = listaNumeros[0];
+    for (let i = 0; i < listaNumeros.length; i++) {
+        if (listaNumeros[i] > mayor) {
+            mayor = listaNumeros[i];
+        } else {
+            if (listaNumeros[i] < menor) {
+                menor = listaNumeros[i];
+            }
+        }
+    }
+    console.log("Número mayor: ", mayor);
+    console.log("Número menor: ", menor);
+}
+
+function sumarLista() {
+    let suma = 0;
+    for (let i = 0; i < listaNumeros.length; i++) {
+        suma += listaNumeros[i]
+    }
+    return suma;
+}
+
+function encontrarIndiceElemento(lista, elemento) {
+    for (let i = 0; i < lista.length; i++) {
+        if (lista[i] == elemento) {
+            return i;
+        }
+    }
+    return -1;
+}
+
