@@ -1,8 +1,9 @@
 <h1 align="center"> Juego del número secreto </h1>
 <div align="center">
-   🚩 ESTADO: Finalizado
+   
+   ![Estado](https://img.shields.io/badge/Estado:-COMPLETO-green)
+   
 </div>
-<br>
 <img src="Banner.PNG" alt="" width="1000px" />
 
 ## 🎰 Sobre el proyecto
